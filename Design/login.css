@@ -1,0 +1,108 @@
+body{
+   
+    background-size: 1870px;
+}
+.main{
+    border: 3px solid black;
+    background-color: white;
+    height: 580px;
+    width: 650px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 35px;
+   left: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+h2{
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+.User{
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+.btn-toggle{
+   width: 220px;
+   margin: 35px auto;
+   position: relative;
+   top: 25px;
+   box-shadow: 0 0 20px 9px #ff61241f;
+   border-radius: 30px;
+}
+.toggle-btn{
+    
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+   position: relative;
+  
+
+}
+.in-btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    /*left: 110px;*/
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.social img{
+    height: 30px;
+    width: 40px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.User-field input{
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 1px solid #ffad06 ;
+    height: 25px;
+    width: 50%;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+.check input{
+    margin: 30px 10px 30px 0;
+    cursor: pointer;
+}
+span{
+    color: #777;
+    font-size: 19px;
+    
+}
+.login-btn{
+    width: 260px;
+    height: 50px;
+    border-radius: 30px;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    box-shadow: 0 0 20px 9px #ff480079;
+    cursor: pointer;
+    font-size: larger;
+    
+}
+.UserName{
+position: relative;
+top: 30px;
+transition: 0.5s;
+
+}
+.Register{
+    position: relative;
+    left: 550px;
+    bottom: 220px;
+    transition: 0.5s
+}

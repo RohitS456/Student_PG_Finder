@@ -1,0 +1,70 @@
+.navbar {
+    background-color: #343a40;
+}
+.navbar-brand {
+            color: #ffbd39; 
+}
+       .nav-link {
+            color: #ffffff;
+            }
+       .nav-link:hover {
+            color: #ffbd39;
+            }
+            .card-custom {
+                width: 100%;
+                max-width: 800px;
+                height: auto;
+                margin: 20px;
+                transition: transform 0.3s, box-shadow 0.3s;
+                display: flex;
+                flex-direction: row;
+            }
+            
+            .card-custom:hover {
+                transform: scale(1.02);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            
+            .card-img-section {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            
+            .card-img {
+                height: 120px;
+                object-fit: cover;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+            
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 20px;
+            }
+            
+            .card-section {
+                margin-bottom: 15px;
+            }
+            
+            .line {
+                border-top: 1px solid #ddd;
+                margin: 10px 0;
+            }
+            
+            .budget {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            
+            .location, .city, .occupancy, .available, .ac, .wifi, .owner-number {
+                font-size: 1rem;
+            }
+            
+            .owner-number {
+                color: #007bff;
+                font-weight: bold;
+            }
+            

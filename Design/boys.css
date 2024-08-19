@@ -1,0 +1,62 @@
+.navbar {
+     background-color: #343a40;
+ }
+ 
+ .navbar-brand {
+     color: #ffbd39;
+ }
+ 
+ .nav-link {
+     color: #ffffff;
+ }
+ 
+ .nav-link:hover {
+     color: #ffbd39;
+ }
+ 
+ .main-search {
+     padding: 20px;
+ }
+ 
+ .card-container {
+     padding: 20px;
+     /* Ensure cards don't overflow their container */
+     overflow-x: auto;
+ }
+ 
+ .card-container .card {
+     cursor: pointer;
+     /* Ensure cards have a minimum width and don't shrink */
+     flex: 1 0 300px; /* Adjust the base width as needed */
+     max-width: 100%;
+     transition: transform 0.3s ease-in-out;
+ }
+ 
+ .card-container .card:hover {
+     transform: scale(1.05);
+ }
+ 
+ .im {
+     width: 100%;
+     height: auto;
+ }
+ 
+ .btn {
+     margin: 5px;
+ }
+ 
+ .budget-input {
+     position: relative;
+     display: flex;
+     align-items: center;
+ }
+ 
+ .budget-input .fa-indian-rupee-sign {
+     position: absolute;
+     left: 10px;
+ }
+ 
+ .budget-input input.form-control {
+     padding-left: 30px;
+ }
+ 

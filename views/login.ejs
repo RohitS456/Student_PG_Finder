@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG 4 U</title>
+    <link rel="stylesheet" href="login.css">
+    
+</head>
+<body>
+    <div class="main">
+        <div class="btn-toggle">
+          <div  class="in-btn"></div>
+        <button class="toggle-btn " id="Lo" onclick="log()" >Login</button>
+        <button class="toggle-btn" onclick="register()" >Registor</button>
+        </div>
+        
+       <br></br><br>
+  
+       <form id="Login" class="UserName" method="post" action="/Register/log">
+       <div class="User-field">
+         <input  name="email" type="text" placeholder="Enter your email" id="username" required>
+        </div>
+        <br></br>
+        <div class="User-field">
+         <input name="password" type="password" placeholder="Enter your password" id="password"required>
+        </div>
+        
+        <br></br>
+        <button type="submit" class="login-btn">Login</button>
+       </form>
+  
+  
+       <form id="Register" class="Register" method="post" action="/Register">
+       <div class="User-field">
+        <input name="name" type="text" placeholder="Enter your name" id="username" required>
+       </div>
+       <br></br>
+       <div class="User-field">
+       <input name="email" type="email" placeholder="Enter your Email" id="username"required>
+       </div>
+       <br></br>
+       <div class="User-field">
+        <input name="password" type="password" placeholder="Enter your password" id="password"required>
+       </div>
+       
+       <br></br>
+       <button  class="login-btn">Register</button>
+       </form>
+       <script src="login.js">
+       
+       </script>
+      </div>
+     
+      
+</body>
+</html>

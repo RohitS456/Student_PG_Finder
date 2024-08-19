@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffbd39 !important;
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+}
+
+.main-search {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.head h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.head p {
+    color: #6c757d;
+}
+
+.search, .search1, .search2, .budget-input {
+    display: flex;
+    align-items: center;
+}
+
+.search i, .search1 i, .search2 i, .budget-input i {
+    margin-right: 10px;
+}
+
+.search input, .search select, .budget-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.budget-input {
+    position: relative;
+}
+
+.budget-input .fa-indian-rupee-sign {
+    position: absolute;
+    left: 10px;
+}
+
+.budget-input input.form-control {
+    padding-left: 30px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+}
+
+.card-part {
+    padding: 40px 0;
+}
+
+.card {
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    border-bottom: 1px solid #ced4da;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer .brand {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer h4 {
+    color: #ffbd39;
+}
+
+.footer .social i {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.footer .f-links a {
+    color: #ffbd39;
+    margin-right: 15px;
+}
