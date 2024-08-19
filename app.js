@@ -31,7 +31,8 @@ app.use(express.static(path.join(__dirname,"Design")));
  
  app.use(express.static(path.join(__dirname, "JavaScript")));
 
-app.get("/home",(req,res)=>{
+ 
+app.get("/",(req,res)=>{
     res.render("login.ejs");
 });
 app.get("/front",(req,res)=>{
