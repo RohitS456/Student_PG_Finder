@@ -8,18 +8,19 @@ const ejsMate=require("ejs-mate");
 app.engine("ejs",ejsMate);
 app.set("view engine","ejs");
 app.set('views', path.join(__dirname, 'views'));
-const MongooseURL="mongodb://127.0.0.1:27017/PG";
+const MongooseURL = "mongodb+srv://singhrohit4546:CdvwqDOEnA3lcXQS@pg.gqyac.mongodb.net/PG?retryWrites=true&w=majority&appName=Pg";
 
-main().then(()=>{
-  console.log("Connected to database!");
-}).catch((err)=>{
-  console.log(err);
-});
-
-
-async function main(){
-    await mongoose.connect(MongooseURL);
+async function main() {
+    await mongoose.connect(MongooseURL, {
+        useNewUrlParser: true, 
+        useUnifiedTopology: true
+    });
+    console.log("Connected to MongoDB Atlas!");
 }
+
+main().catch((err) => {
+    console.error("Database connection error:", err);
+});
 
 const pgmodel=require("./Database/pg.js");
 const Reg=require("./Database/dataSchema.js");
@@ -60,7 +61,7 @@ app.post("/Register", async(req,res)=>{
         const{email,password}=req.body;
         if(await Reg.findOne({email:email,password:password})){
             console.log("Right email & password");
-            res.redirect("/front");
+             await res.redirect("/front");
         } 
            else{
             res.redirect("/login?error=1");
@@ -72,9 +73,7 @@ app.post("/Register", async(req,res)=>{
 
   
 
-app.get("/login",(req,res)=>{
-    res.render("login.ejs");
-});
+
 
 app.get("/ps", async(req,res)=>{
     res.render("ps.ejs");
