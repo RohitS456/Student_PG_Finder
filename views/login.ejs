@@ -5,53 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PG 4 U</title>
     <link rel="stylesheet" href="login.css">
-    
 </head>
 <body>
     <div class="main">
-        <div class="btn-toggle">
-          <div  class="in-btn"></div>
-        <button class="toggle-btn " id="Lo" onclick="log()" >Login</button>
-        <button class="toggle-btn" onclick="register()" >Registor</button>
+        <div class="form-container">
+            <div class="btn-toggle">
+                <div class="in-btn"></div>
+                <button class="toggle-btn" id="login-btn" onclick="showLogin()">Login</button>
+                <button class="toggle-btn" id="register-btn" onclick="showRegister()">Register</button>
+            </div>
+           
+            <form id="Login" class="form UserName active" method="post" action="/Register/log">
+                <div class="User-field">
+                    <input name="email" type="text" placeholder="Enter your email" id="login-email" required>
+                </div>
+                <br>
+                <div class="User-field">
+                    <input name="password" type="password" placeholder="Enter your password" id="login-password" required>
+                </div>
+                <br>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+    
+            <form id="Register" class="form Register" method="post" action="/Register">
+                <div class="User-field">
+                    <input name="name" type="text" placeholder="Enter your name" id="register-name" required>
+                </div>
+                <br>
+                <div class="User-field">
+                    <input name="email" type="email" placeholder="Enter your Email" id="register-email" required>
+                </div>
+                <br>
+                <div class="User-field">
+                    <input name="password" type="password" placeholder="Enter your password" id="register-password" required>
+                </div>
+                <br>
+                <button type="submit" class="login-btn">Register</button>
+            </form>
+            
         </div>
-        
-       <br></br><br>
-  
-       <form id="Login" class="UserName" method="post" action="/Register/log">
-       <div class="User-field">
-         <input  name="email" type="text" placeholder="Enter your email" id="username" required>
-        </div>
-        <br></br>
-        <div class="User-field">
-         <input name="password" type="password" placeholder="Enter your password" id="password"required>
-        </div>
-        
-        <br></br>
-        <button type="submit" class="login-btn">Login</button>
-       </form>
-  
-  
-       <form id="Register" class="Register" method="post" action="/Register">
-       <div class="User-field">
-        <input name="name" type="text" placeholder="Enter your name" id="username" required>
-       </div>
-       <br></br>
-       <div class="User-field">
-       <input name="email" type="email" placeholder="Enter your Email" id="username"required>
-       </div>
-       <br></br>
-       <div class="User-field">
-        <input name="password" type="password" placeholder="Enter your password" id="password"required>
-       </div>
-       
-       <br></br>
-       <button  class="login-btn">Register</button>
-       </form>
-       <script src="login.js">
-       
-       </script>
-      </div>
-     
-      
+
+        <script>
+            window.onload = function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('error')) {
+                    alert('Wrong email or password');
+                }
+            };
+
+            function showLogin() {
+                document.getElementById('Login').classList.add('active');
+                document.getElementById('Register').classList.remove('active');
+                document.querySelector('.in-btn').style.left = '0'; // Optional: Adjust slider position
+            }
+
+            function showRegister() {
+                document.getElementById('Login').classList.remove('active');
+                document.getElementById('Register').classList.add('active');
+                document.querySelector('.in-btn').style.left = '110px'; // Optional: Adjust slider position
+            }
+        </script>
+    </div>
 </body>
 </html>

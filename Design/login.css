@@ -1,108 +1,99 @@
-body{
-   
-    background-size: 1870px;
+body {
+    background-size: cover; /* Ensure background size covers the entire page */
+    margin: 0;
+    padding: 0;
 }
-.main{
+
+.main {
     border: 3px solid black;
     background-color: white;
     height: 580px;
     width: 650px;
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     position: relative;
     top: 35px;
-   left: 450px;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 30px;
     overflow: hidden;
 }
-h2{
-    display: block;
-    text-align: center;
-    justify-content: center;
+
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
-.User{
-    display: block;
-    text-align: center;
-    justify-content: center;
+
+.btn-toggle {
+    border: black;
+    width: 220px;
+    margin-bottom: 30px; /* Space between toggle buttons and forms */
+    position: absolute;
+    bottom: 180px; /* Adjust if needed */
+    z-index: 1; /* Ensure it is above other elements */
 }
-.btn-toggle{
-   width: 220px;
-   margin: 35px auto;
-   position: relative;
-   top: 25px;
-   box-shadow: 0 0 20px 9px #ff61241f;
-   border-radius: 30px;
-}
-.toggle-btn{
-    
+
+
+.toggle-btn {
     padding: 10px 30px;
     cursor: pointer;
     background: transparent;
     border: 0;
     outline: none;
-   position: relative;
-  
-
+    position: relative;
 }
-.in-btn{
+
+.in-btn {
     top: 0;
     left: 0;
     position: absolute;
-    /*left: 110px;*/
     width: 110px;
     height: 100%;
-    background: linear-gradient(to right,#ff105f,#ffad06);
+    background: linear-gradient(to right, #ff105f, #ffad06);
     border-radius: 30px;
-    transition: 0.5s;
+    transition: left 0.5s; /* Smooth transition for slider */
+    z-index: -1; /* Ensure slider is below the buttons */
 }
-.social img{
-    height: 30px;
-    width: 40px;
-    margin: 0 12px;
-    box-shadow: 0 0 20px 0 #7f7f7f3d;
-    cursor: pointer;
-    border-radius: 50%;
-}
-.User-field input{
+
+.User-field input {
     border-top: transparent;
     border-left: transparent;
     border-right: transparent;
-    border-bottom: 1px solid #ffad06 ;
+    border-bottom: 1px solid #ffad06;
     height: 25px;
-    width: 50%;
+    width: 100%; /* Full width for better alignment */
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
 }
-.check input{
-    margin: 30px 10px 30px 0;
-    cursor: pointer;
-}
-span{
-    color: #777;
-    font-size: 19px;
-    
-}
-.login-btn{
-    width: 260px;
+
+.login-btn {
+    width: 100%; /* Full width for consistency */
     height: 50px;
     border-radius: 30px;
-    background: linear-gradient(to right,#ff105f,#ffad06);
+    background: linear-gradient(to right, #ff105f, #ffad06);
     box-shadow: 0 0 20px 9px #ff480079;
     cursor: pointer;
     font-size: larger;
-    
 }
-.UserName{
-position: relative;
-top: 30px;
-transition: 0.5s;
 
+.form {
+    width: 100%; /* Ensure both forms have the same width */
+    position: absolute;
+  
+    top: 100px;
+    left: 0;
+    transition: opacity 0.5s; /* Smooth transition for form visibility */
+    opacity: 0;
+    z-index: 1;
 }
-.Register{
-    position: relative;
-    left: 550px;
-    bottom: 220px;
-    transition: 0.5s
+
+.UserName.active, .Register.active {
+    opacity: 1;
+    z-index: 2; /* Ensure the active form is above the inactive one */
 }

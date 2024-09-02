@@ -8,19 +8,17 @@ const ejsMate=require("ejs-mate");
 app.engine("ejs",ejsMate);
 app.set("view engine","ejs");
 app.set('views', path.join(__dirname, 'views'));
-const MongooseURL = "mongodb+srv://singhrohit4546:CdvwqDOEnA3lcXQS@pg.gqyac.mongodb.net/PG?retryWrites=true&w=majority&appName=Pg";
-
-async function main() {
-    await mongoose.connect(MongooseURL, {
-        useNewUrlParser: true, 
-        useUnifiedTopology: true
-    });
-    console.log("Connected to MongoDB Atlas!");
+// MongoDB connection
+mongoose.connect('mongodb+srv://singhjirohit456:ZgE7dNHuHK8yTNE5@cluster0.we3je.mongodb.net/PG', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => console.log('Connected to MongoDB Atlas'))
+.catch(err => console.error('Error connecting to MongoDB Atlas:', err));
+//Connection of Mongoose
+async function main(){
+    await mongoose.connect(MONGO_URL);
 }
-
-main().catch((err) => {
-    console.error("Database connection error:", err);
-});
 
 const pgmodel=require("./Database/pg.js");
 const Reg=require("./Database/dataSchema.js");
